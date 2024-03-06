@@ -1,13 +1,13 @@
 import express,{json} from 'express';
 import dotenv from 'dotenv';
-
+import conectarDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 
 //-------------
 const app = express(); //   Funcionalidad express
 dotenv.config();
+conectarDB();
 app.use(express.json());
-
 //-------------
     //  Routing
 app.use('/auth',authRoutes);

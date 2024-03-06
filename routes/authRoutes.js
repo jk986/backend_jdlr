@@ -1,8 +1,10 @@
 import express, { Router } from 'express';
-import { registrar } from '../controllers/authController.js';
+import { 
+    iniciarSesion
+} from '../controllers/authController.js';
 
 const ROUTER = express.Router(); // para ,etodos http
 
-ROUTER.post('/',registrar);
+ROUTER.post('/',iniciarSesion);
 
 export default ROUTER;

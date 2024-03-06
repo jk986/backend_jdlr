@@ -1,17 +1,20 @@
 
 
 //------------
-const registrar = async (req,res) => {
+const iniciarSesion = async (req,res) => {
     try {
-        // evitar registros duplicados
-        const {email} = req.body;
-        return res.json({msg:`Hola mundo desde authController ${email}`});
-    } catch (error) {
+        const { email, pass }  = req.body;
+        return res.json({msg:"Autenticacion Correcta",email:email,pass:pass})
         
+    } catch (error) {
+        const err = new Error("Autenticación fallida");
+        return res.status(403).json({msg:err.message});
     }
 }
 
 
+
+
 export {
-    registrar
+    iniciarSesion
 };

@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { 
+    import { 
     iniciarSesion
 } from '../controllers/authController.js';
 

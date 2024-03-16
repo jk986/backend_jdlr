@@ -6,5 +6,5 @@ const schUsuario = mongoose.Schema({
     role:{type:String,require:true,trim:true}
 });
 
-const usuario = schUsuario.model("usuario",schUsuario);
+const usuario = mongoose.model("usuario",schUsuario);
 export default usuario;
